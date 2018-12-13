@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Examen</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script src="js/validarFormulario.js"></script>
+
+</head>
+<center><body>
+	<div id="principal">
+	<div id="nuevo-libro">
+	<form method="get" id="formCrear" action="#">
+		<h3>Nuevo Libro <img class="icons" id="libro-icon"></h3><br>
+		<span>Titulo:</span>
+		<input type="text" name="titulo" id="titulo" required>
+		<br><br>
+		<span>Autor:</span>
+  		<input type="text" name="autor" id="autor" required>
+  		<br><br>
+  		<span>ISBN:</span>
+  		<input type="number" name="isbn" id="isbn" required>
+  		<br><br>
+  		<span>Géneros:</span><br>
+  		<br>
+  		<div id="checkboxes">
+  			<p>
+	  		<input type="checkbox" name="generos" value="Policíaca">Policíaca
+	 		<input type="checkbox" name="generos" value="Histórica"> Histórica 
+			<input type="checkbox" name="generos" value="Ciencia Ficción"> Ciencia Ficción
+			</p>
+
+			<p>
+			<input type="checkbox" name="generos" value="Fantástica"> Fantástica 
+			<input type="checkbox" name="generos" value="Romántica"> Romántica 
+			</p>
+		</div>
+		<br><br>
+
+  		<button type="button" id="aNL">Añadir</button>
+
+	</form>
+	</div>
+	<div id="consultar-datos">
+	<form method="get" id="formConsultar" action="#">
+		<h3>Consultar Datos<img class="icons" id="consulta-icon"></h3>
+		<span>Titulo:</span>
+		<input type="text" name="titulo" id="titulo" required disabled>
+		<br><br>
+		<span>Autor:</span>
+  		<input type="text" name="autor" id="autor" required disabled>
+  		<span>ISBN:</span>
+  		<input type="number" name="isbn"  id="isbn" required disabled>
+  		<br><br>
+  		<span>Géneros:</span><br>
+  		<br>
+  		<div id="generos-consulta"></div>
+		<br><br>
+		<span>Prestado a:</span><br>
+  		<input type="email" name="mail" id="prestado">
+  		<br><br>
+  		<input type="submit" value="Devolver" id="btnDevolver">
+  		<input type="submit" value="Prestar" id="btnPrestar">
+
+	</form>
+	</div>
+
+	<div id="disponibles">
+		<h3>Disponibles<img class="icons" id="disponible-icon"></h3>
+		<div id="libros-disponibles">
+    	<ul  id="lista-disponible" style="list-style-type:none">
+  			<li hidden></li>
+    	</ul>
+		</div>
+	</div>
+
+	<div id="prestamos">
+		<h3>Préstamos<img id="prestamo-icon" class="icons"></h3>
+			<div id="libros-prestados">
+    					<ul  id="lista-prestado" style="list-style-type:none">
+        					<li hidden></li>
+    			</ul>
+
+	</div>
+
+</div>
+</body></center>
+
+<script src="js/script.js"></script>
+
+</html>

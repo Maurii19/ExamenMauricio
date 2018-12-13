@@ -1,0 +1,202 @@
+
+h3{
+	text-align: center;
+}
+
+
+
+#principal{
+
+	margin-left: 20%;
+	display : flex;
+   	flex-direction : row ;
+    justify-content : space-around;
+   	flex-flow : wrap;
+}
+
+
+#nuevo-libro{
+	width: 35%;
+	height: auto;
+	background-color:#80ffff;
+	float: left;
+	text-align: left;
+	border-style: solid;
+	border-color: #1ab2ff;
+
+
+}
+
+#nuevo-libro span{
+	margin-left: 1%;
+}
+
+#nuevo-libro #titulo{
+	width: 80%;
+
+}
+#nuevo-libro #autor{
+	width: 80%;
+}
+#nuevo-libro #isbn{
+	width: 80%;
+}
+
+#aNL{
+	float: right;
+	margin-right: 1%;
+}
+
+#consultar-datos{
+	width: 35%;
+	background-color:#80ffff;
+	float: right;
+	text-align: left;
+	margin-right: 29%;
+	border-style: solid;
+	border-color: #1ab2ff;
+}
+
+#consultar-datos span{
+	margin-left: 2%;
+}
+#consultar-datos #titulo{
+	width: 80%;
+}
+
+#consultar-datos #autor{
+	width: 35%;
+}
+#consultar-datos #isbn{
+	width: 35%;
+}
+#generos-consulta{
+	background-color: white;
+	margin-left: 4%;
+	width: 90%;
+	height: 40px;
+
+}
+#consultar-datos #prestado{
+	width: 80%;
+	margin-left: 2%;
+
+}
+
+#btnDevolver{
+	float: right;
+	margin-right: 2%;
+
+}
+
+#btnPrestar{
+	float: right;
+	margin-right: 2%;
+}
+
+
+
+#disponibles{
+	width: 35%;
+	background-color:#80ffff;
+	float: left;
+	margin-top: 10px;
+	border-style: solid;
+	border-color: #1ab2ff;
+}
+
+
+
+#libros-disponibles{
+	background-color: white;
+	width: 90%;
+	height: 300px;
+	margin-left: 1%;
+	text-align: left;
+}
+
+#libros-disponibles li {
+	width: 110%;
+	border-style:outset;
+
+
+}
+#libros-disponibles ul {
+	width: 90%;
+	margin-left: -40px;
+
+}
+
+
+.creado{
+	background-color: green;
+}
+.devuelto{
+	background-color: #ff99cc;
+}
+.seleccionado{
+	background-color: #6699ff;
+}
+.prestados{
+	background-color: red;
+}
+
+#libros:hover{
+	background-color: grey !important;
+	font-weight: bold;
+	color: white;
+}
+
+
+#prestamos{
+	width: 35%;
+	background-color:#80ffff;
+	float: right;
+	margin-top: 10px;
+	margin-right: 29%;
+	border-style: solid;
+	border-color: #1ab2ff;
+}
+
+#libros-prestados{
+	background-color: white;
+	width: 90%;
+	height: 300px;
+	margin-left: 1%;
+	text-align: left;
+
+}
+#libros-prestados li {
+	width: 110%;
+	border-style:outset;
+
+
+}
+#libros-prestados ul {
+	width: 90%;
+	margin-left: -40px;
+
+}
+.icons{
+    background: url("../images/iconos.png");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+
+    }
+
+#consulta-icon{
+    background-position: -435px -290px;
+}
+#libro-icon{
+	background-position: -40px -398px;
+}
+#disponible-icon{
+	background-position:-326px -38px;
+}
+
+#prestamo-icon{
+	background-position:-470px -257px;
+}
