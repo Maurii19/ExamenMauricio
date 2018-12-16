@@ -85,9 +85,6 @@ $(document).ready(function(){
 			if ($(this).html() == librosBiblioteca[i].titulo) {
 				var libroSeleccionado = librosBiblioteca[i];
 				var consultarLibro = document.getElementById('formConsultar');
-				if(consultarLibro.elements[0].value == libroSeleccionado.titulo){
-
-				}else{
 					$(this).removeClass('creado');
 					$(this).addClass('seleccionado');
 					consultarLibro.elements[0].value = libroSeleccionado.titulo;
@@ -97,7 +94,7 @@ $(document).ready(function(){
 					for(var i = 0; i < libroSeleccionado.generos.length; i++){
 						$('#generos-consulta').append(libroSeleccionado.generos[i]+ ' | ');
 					}
-				}
+
 			}
 		}
 	});
@@ -107,20 +104,16 @@ $(document).ready(function(){
 			if($(this).html() == librosBiblioteca[i].titulo){
 				var libroSeleccionado = librosBiblioteca[i];
 				var consultarLibro = document.getElementById('formConsultar');
-				if(consultarLibro.elements[0].value == libroSeleccionado.titulo){
-
-				}else{
 					$(this).removeClass('prestados');
 					$(this).addClass('seleccionado');
 					consultarLibro.elements[0].value = libroSeleccionado.titulo;
 					consultarLibro.elements[1].value = libroSeleccionado.autor;
 					consultarLibro.elements[2].value = libroSeleccionado.isbn;
-
 					$('#generos-consulta').html('');
 					for (var i = 0; i < libroSeleccionado.generos.length; i++) {
 						$('#generos-consulta').append(libroSeleccionado.generos[i]+ ' | ');
 					}
-				}
+
 			}
 		}
 	});
