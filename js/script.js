@@ -86,7 +86,7 @@ $(document).ready(function(){
 				var libroSeleccionado = librosBiblioteca[i];
 				var consultarLibro = document.getElementById('formConsultar');
 				if(consultarLibro.elements[0].value == libroSeleccionado.titulo){
-					alert('Este libro ya esta seleccionado');
+
 				}else{
 					$(this).removeClass('creado');
 					$(this).addClass('seleccionado');
@@ -96,7 +96,7 @@ $(document).ready(function(){
 					$('#generos-consulta').html('');
 					for(var i = 0; i < libroSeleccionado.generos.length; i++){
 						$('#generos-consulta').append(libroSeleccionado.generos[i]+ ' | ');
-					}	
+					}
 				}
 			}
 		}
@@ -108,7 +108,6 @@ $(document).ready(function(){
 				var libroSeleccionado = librosBiblioteca[i];
 				var consultarLibro = document.getElementById('formConsultar');
 				if(consultarLibro.elements[0].value == libroSeleccionado.titulo){
-					alert('Este libro ya esta seleccionado');
 
 				}else{
 					$(this).removeClass('prestados');

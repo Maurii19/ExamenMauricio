@@ -1,74 +1,82 @@
-
-h3{
+h1{
+	font-size:18px;
 	text-align: center;
 }
 
+ul{
+	list-style-type:none;
+}
+body{
+		display: flex;
+
+	  max-width: 100%;
+}
+label.error {
+		float: right;
+    background: red;
+		color: white;
+		font-size: 14px;
+		margin: 0;
+}
+
+#checkboxes{
+	margin: 0;
+	float: left;
+}
 
 
 #principal{
-
-	margin-left: 20%;
-	display : flex;
-   	flex-direction : row ;
-    justify-content : space-around;
-   	flex-flow : wrap;
+	min-width:  70%;
+	margin: 30px auto 0 auto;
 }
-
-
-#nuevo-libro{
-	width: 35%;
-	height: auto;
+#nuevo-libro, #consultar-datos, #disponibles, #prestamos{
+	max-width: 50%;
+	min-width: 45%;
+	min-height: 360px;
+	max-height: 50%;
 	background-color:#80ffff;
-	float: left;
 	text-align: left;
-	border-style: solid;
+	border: 2px solid;
 	border-color: #1ab2ff;
-
+ 	margin-bottom: 10px;
+	margin-left: 10px;
+	float: left;
+	padding: 1%;
+}
+@media only screen and (max-width: 890px) {
+  #nuevo-libro, #consultar-datos, #disponibles, #prestamos {
+		min-width: 95%;
+  }
+}
+#nuevo-libro label{
+	margin: 0;
 
 }
 
-#nuevo-libro span{
-	margin-left: 1%;
-}
-
-#nuevo-libro #titulo{
+#nuevo-libro #autor, #titulo, #isbn{
 	width: 80%;
+}
 
-}
-#nuevo-libro #autor{
-	width: 80%;
-}
-#nuevo-libro #isbn{
-	width: 80%;
-}
 
 #aNL{
 	float: right;
-	margin-right: 1%;
+	margin: 90px 0 0 0;
 }
 
-#consultar-datos{
-	width: 35%;
-	background-color:#80ffff;
-	float: right;
-	text-align: left;
-	margin-right: 29%;
-	border-style: solid;
-	border-color: #1ab2ff;
-}
 
-#consultar-datos span{
+#consultar-datos label{
 	margin-left: 2%;
+
 }
 #consultar-datos #titulo{
-	width: 80%;
+	max-width: 80%;
 }
 
 #consultar-datos #autor{
-	width: 35%;
+	max-width: 35%;
 }
 #consultar-datos #isbn{
-	width: 35%;
+	max-width: 35%;
 }
 #generos-consulta{
 	background-color: white;
@@ -94,25 +102,12 @@ h3{
 	margin-right: 2%;
 }
 
-
-
-#disponibles{
-	width: 35%;
-	background-color:#80ffff;
-	float: left;
-	margin-top: 10px;
-	border-style: solid;
-	border-color: #1ab2ff;
-}
-
-
-
 #libros-disponibles{
 	background-color: white;
 	width: 90%;
 	height: 300px;
-	margin-left: 1%;
 	text-align: left;
+	margin:auto;
 }
 
 #libros-disponibles li {
@@ -126,7 +121,6 @@ h3{
 	margin-left: -40px;
 
 }
-
 
 .creado{
 	background-color: green;
@@ -148,22 +142,12 @@ h3{
 }
 
 
-#prestamos{
-	width: 35%;
-	background-color:#80ffff;
-	float: right;
-	margin-top: 10px;
-	margin-right: 29%;
-	border-style: solid;
-	border-color: #1ab2ff;
-}
-
 #libros-prestados{
 	background-color: white;
 	width: 90%;
 	height: 300px;
-	margin-left: 1%;
 	text-align: left;
+	margin:auto;
 
 }
 #libros-prestados li {

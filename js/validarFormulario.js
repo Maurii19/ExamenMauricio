@@ -2,24 +2,45 @@ $(document).ready(function(){
 	$('#formCrear').validate({
 		rules: {
 			titulo:{
-				required: true,
-				minlength: 2
+				required: true
 			},
 
 			autor:{
-				required: true,
-				minlength: 4
+				required: true
 			},
 			isbn:{
 				required: true,
-				number: true,
-				notEqual: 0
+				number: true
+			},
+			generos:{
+				required: true
 			}
 		},
 		messages: {
-			titulo: "Introduce el titulo del libro.",
-			autor: "Introduce el autor del libro.",
-			isbn: "Introduce el ISBN del libro."
+			titulo: {
+				required:"Introduce el titulo del libro."
+			},
+			autor:{
+				required:"Introduce el autor del libro."
+			},
+			isbn: {
+				required:"Introduce el ISBN del libro.",
+				number: "Introduce solo numeros"
+			},
+			generos: {
+				required: "Selecciona uno o mas géneros"
+			}
 		}
-	})
+	});
+	$('#formCrear').bind('change keyup', function() {
+
+	    if($(this).validate().checkForm()) {
+
+	        $('#aNL').attr('disabled', false);
+
+	    } else {
+
+	        $('#aNL').attr('disabled', true);
+
+	    } });
 });
