@@ -24,6 +24,10 @@ label.error {
 	float: left;
 }
 
+.checkbox{
+		background-color: #ff8080;
+}
+
 
 #principal{
 	min-width:  70%;

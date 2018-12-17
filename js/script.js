@@ -24,7 +24,7 @@ function crearLibroBiblioteca(libroCreado){
 	});
 
 		if(libroExiste){
-			alert('El libro ' + libroCreado.titulo + " existe.");
+			alert("El libro ya existe");
 		}else{
 			$('#lista-disponible').append('<li id="libros" class="creado">'+libroCreado.titulo+'</li>');
 				librosBiblioteca.push(libroCreado);
@@ -119,7 +119,10 @@ $(document).ready(function(){
 	});
 
 
+
+
 	$('#aNL').click(function(){
+
 		var formCrear = document.getElementById('formCrear');
 		var tituloLibro = formCrear.elements[0].value;
 		var autorLibro = formCrear.elements[1].value;
@@ -127,12 +130,18 @@ $(document).ready(function(){
 		var generosLibro = [];
 
 		$('#checkboxes input').each(function(){
-      if($(this).prop('checked')){
-        generosLibro.push($(this).val());
+      if(!$(this).prop('checked')){
+				$( "#checkboxes" ).toggleClass("caja checkbox");
+      }else {
+				generosLibro.push($(this).val());
+				var libroCreado = new Libro(tituloLibro,autorLibro,isbnLibro,generosLibro);
+				crearLibroBiblioteca(libroCreado);
+					$("#checkboxes").removeClass("checkbox");
+
       }
+
     });
-		var libroCreado = new Libro(tituloLibro,autorLibro,isbnLibro,generosLibro);
-		crearLibroBiblioteca(libroCreado);
+
 	})
 
 	$('#btnPrestar').click(function(){

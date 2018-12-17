@@ -31,7 +31,10 @@ $(document).ready(function(){
 			}
 		}
 	});
-	$('#formCrear').bind('change keyup', function() {
+
+
+
+	/*$('#formCrear').bind('change keyup', function() {
 		 $('#aNL').attr('disabled', true);
 	    if($(this).validate().checkForm()) {
 
@@ -43,7 +46,7 @@ $(document).ready(function(){
 
 	    }
 
-		 });
+		});*/
 
 
 	$('#formConsultar').validate({
@@ -60,7 +63,7 @@ $(document).ready(function(){
 			}
 		}
 	});
-	$('#formConsultar').bind('change keyup', function() {
+	/*$('#formConsultar').bind('change keyup', function() {
 
 	    if($(this).validate().checkForm()) {
 
@@ -74,6 +77,6 @@ $(document).ready(function(){
 
 	    }
 
-	});
+	});*/
 
 });
